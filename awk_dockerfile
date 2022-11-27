@@ -1,0 +1,20 @@
+###################################################
+# Melissa Cook
+# IS301 Fall 2022
+# Build_and_deploy_a_solution_with_a_dockerfile
+###################################################
+
+# get base image ubuntu
+FROM ubuntu:latest
+
+# set working directory
+WORKDIR /home/melis/docker
+
+# copy script into working directory
+COPY awk.sh . 
+
+# add execute permissions
+RUN chmod +x awk.sh
+
+# run script awk.sh
+RUN /home/melis/docker/awk.sh
